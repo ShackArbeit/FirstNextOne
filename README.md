@@ -9,6 +9,7 @@
 ## models => 定義資料庫的 Schema
 ### user.js => 在 MongoDb 資料庫中建立使用者模型，以存放登入的使用者資料
 ### prompt.js => 在 MongoDb 資料庫內中建立讓使用者發表意見的模型，將使用者所輸入的意見放入 MongoDb 資料庫中。
+
 ## components => 存放會重複使用的 JSX Components
 ### Nav.jsx => 是所有頁面的樣式 ( 頁首 & 頁尾 )
 ### Provider.jsx => 將各狀態傳遞給各頁面的傳遞 Component 
@@ -21,6 +22,19 @@
 ### database.js => 用 Mongoose 設定連接 MongoDb 的設定
 
 ## 開發流程 
-### 建立 app 資料夾下的 page.jex & layout.jsx 
+### 建立 app 資料夾下的 page.jsx & layout.jsx 
 #### layout.jsx 中夾住了 Nav component，代表頁首的樣式，Provider      component   代表給全部頁面傳遞 Session 的設定
 #### Nav.jsx 中設定了桌上及行動版的樣式，並分別用 Google 來判斷是否登入
+
+### 在 app 資料夾 => api 子資料夾 => auth 子資料夾 => [...nextauth] 子資料夾內建立 route.js ，已建立使用 Google 來驗證登入的後端設定，其中包含 signIn ( 將 Google 使用者的資料放進 MongoDb 資料庫內)
+
+### 在 utils 資料夾中建立 database.js ，用來連線到 MongoDb 資料庫
+
+### 在 models 資料夾內建立 user.js 以建立使用者的資料庫模型，其中 User 模型是用在 [...nextauth] => route.js 內
+
+### 在 app 資料夾 => create-prompt 子資料夾內 => page.jsx ，裡面是進入創造意見頁面的設定，其中裡面包含了從 Componet 資料夾 => Form.jsx Componet ，用 Form.jsx Componet 來顯示所有輸入表單的樣式。
+
+### 在 models 資料夾內建立 prompt.js 以建立使用者輸入意見的資料庫模型，其中 Prompt  模型用在 app 資料夾 => api 子資料夾 => prompt 子資料夾 => new 子資料夾 => route.js 內，用來設定將使用者所輸入的內容放進 MongoDb 資料庫內。
+
+
+
