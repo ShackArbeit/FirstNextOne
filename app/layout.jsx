@@ -1,6 +1,6 @@
 import '../styles/globals.css'
 
-
+import Nav from '@/components/Nav';
 
 export const metadata = {
   title: "Sharing Your Options !",
@@ -15,7 +15,7 @@ const RootLayout = ({ children }) => (
         </div>
 
         <main className='app'>
-        
+         <Nav/>
           {children}
         </main>
       

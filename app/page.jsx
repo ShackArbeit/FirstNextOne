@@ -1,4 +1,4 @@
-import React from "react";
+import Feed from "@/components/Feed";
 
 const Home = () => (
   <section className="w-full flex-center flex-col">
@@ -8,8 +8,9 @@ const Home = () => (
       <span className="orange_gradient text-center "> 說出你的想法</span>
     </h1>
     <p className="desc text-center">
-      Promptopia 是開放可以分享的平台，讓你能發現、創作和分享你的創意想法
+     JustShare 是開放可以分享的平台，讓你能發現、創作和分享你的創意想法
     </p>
+    <Feed/>
   </section>
 );
 
