@@ -6,10 +6,7 @@ import User from '@/models/user';
 // 這裡是 import 連接 MongoDb 資料庫的 Component 設定
 import { connectToDB } from '@/utils/database';
 
-console.log({
-      clientId: process.env.GOOGLE_ID,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-})
+
 
 const handler = NextAuth({
   providers: [

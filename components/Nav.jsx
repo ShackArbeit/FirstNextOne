@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { signIn, signOut, useSession, getProviders } from "next-auth/react";
 
 const Nav = () => {
-  const isUserLoggin = true;
+  const { data: session } = useSession();
   //  toogleDropdown 是用來設定行動版的點擊開關
   const [toggleDropdown, setToggleDropdown] = useState(false);
   // provider 是用來設定是否有登入狀態
@@ -30,7 +30,7 @@ const Nav = () => {
       </Link>
       {/*  Desktop  Navigation */}
       <div className='sm:flex hidden'>
-        {isUserLoggin?(
+        {session?.user?(
           <div className="flex gap-3 md:gap-5">
             <Link href='/create-prompt' className='black_btn'>
               Create Post
@@ -40,7 +40,7 @@ const Nav = () => {
             </button>
             <Link href='/profile'>
               <Image
-                src='/assets/images/logo.svg'
+                src={session?.user.image}
                 width={37}
                 height={37}
                 className='rounded-full'
@@ -66,10 +66,10 @@ const Nav = () => {
       </div>
         {/* Mobile Navigation */}
         <div className='sm:hidden flex relative'>
-        {isUserLoggin ? (
+        {session?.user? (
           <div className='flex'>
             <Image
-              src="/assets/images/logo.svg"
+              src={session?.user.image}
               width={37}
               height={37}
               className='rounded-full'
