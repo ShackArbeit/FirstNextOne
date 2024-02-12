@@ -7,3 +7,5 @@
 ## components => 存放會重複使用的 JSX Components
 ## styles => 所有的 CSS 樣式設定
 ## utils => 存放功能函式
+## 開發流程 
+### 建立 app 資料夾下的 page.jex & layout.jsx 
