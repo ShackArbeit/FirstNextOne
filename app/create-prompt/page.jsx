@@ -34,13 +34,13 @@ const CreatePrompt = () => {
     };
   return <div>
         <Form
-            type='創造'
+            type='Erstellen'
             post={post}
             setPost={setPost}
             submitting={submitting}
             handleSubmit={createPrompt}
          />
-         Create Post
+         Beitrag Erstellen
   </div>;
 };
 

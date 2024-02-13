@@ -20,23 +20,23 @@ const Nav = () => {
     <nav className="flex-between w-full mb-16 pt-3">
       <Link href="/" className="flex gap-2 flex-center">
         <Image
-          src="/assets/images/logo.svg"
+          src="/assets/images/Taiwan.svg"
           alt="logo"
-          width={30}
-          height={30}
+          width={80}
+          height={80}
           className="object-contain"
         />
-        <p className="logo_text">JustShare </p>
+        <p className="logo_text">Just Share  </p>
       </Link>
       {/*  Desktop  Navigation */}
       <div className='sm:flex hidden'>
         {session?.user?(
           <div className="flex gap-3 md:gap-5">
             <Link href='/create-prompt' className='black_btn'>
-              Create Post
+              Beitrag Erstellen
             </Link>
             <button type='button' onClick={signOut} className='outline_btn'>
-              Sign Out
+             Abmelden
             </button>
             <Link href='/profile'>
               <Image
@@ -59,7 +59,7 @@ const Nav = () => {
                   }}
                   className='black_btn'
                 >
-                  Sign in
+                  Anmelden
                 </button>
               ))}
             </>)}
@@ -83,14 +83,14 @@ const Nav = () => {
                   className='dropdown_link'
                   onClick={() => setToggleDropdown(false)}
                 >
-                  My Profile
+                  Mein Profil
                 </Link>
                 <Link
                   href='/create-prompt'
                   className='dropdown_link'
                   onClick={() => setToggleDropdown(false)}
                 >
-                  Create Prompt
+                  Beitrag Erstellen
                 </Link>
                 <button
                   type='button'
@@ -100,7 +100,7 @@ const Nav = () => {
                   }}
                   className='mt-5 w-full black_btn'
                 >
-                  Sign Out
+                  Abmelden
                 </button>
               </div>
             )}
@@ -117,7 +117,7 @@ const Nav = () => {
                   }}
                   className='black_btn'
                 >
-                  Sign in
+                  Anmelden
                 </button>
               ))}
           </>

@@ -7,8 +7,7 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
         <span className='blue_gradient'>{type} Post</span>
       </h1>
       <p className='desc text-left max-w-md'>
-        {type} 並與世界分享你創意的想法，讓全世界都知道你無限的
-        想像力 !
+        {type} und teile Ihre kreativen Ideen mit der Welt und zeige ihr, dass Sie grenzenlos sind Vorstellung!
       </p>
       <form
         onSubmit={handleSubmit}
@@ -16,7 +15,7 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
       >
          <label>
           <span className='font-satoshi font-semibold text-base text-gray-700'>
-            你的想像力 !
+            Ihre Vorstellung !
           </span>
           <textarea
             value={post.prompt}
@@ -44,7 +43,7 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
         </label>
         <div className='flex-end mx-3 mb-5 gap-4'>
           <Link href='/' className='text-gray-500 text-sm'>
-            取消
+            Stornieren
           </Link>
 
           <button
