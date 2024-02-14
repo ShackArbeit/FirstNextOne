@@ -1,12 +1,13 @@
 import Prompt from "@/models/prompt"
 import { connectToDB } from "@/utils/database"
+import { withCoalescedInvoke } from "next/dist/lib/coalesced-function"
 
 export const GET = async (request) => {
     try {
         await connectToDB()
 
         const prompts = await Prompt.find({}).populate('creator')
-        console.log('Successly get all Posts')
+        console.log('Success get all post !')
         return new Response(JSON.stringify(prompts), { status: 200 })
     } catch (error) {
         console.log('Can not get all Post !')
